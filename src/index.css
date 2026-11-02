@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy-deep: #0a1628;
+    --color-navy-surface: #0f1e36;
+    --color-rtx-blue: #1e56a0;
+    --color-rtx-blue-hover: #164684;
+    --color-accent-amber: #f59e0b;
+    --color-accent-amber-hover: #d97706;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Industrial blueprint grid pattern */
+.bg-industrial-grid {
+  background-image: 
+    linear-gradient(to right, rgba(15, 82, 186, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 82, 186, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-industrial-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-blueprint-dots {
+  background-image: radial-gradient(rgba(30, 86, 160, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-blueprint-dots-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Card hover glow effects */
+.hover-card-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-card-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(10, 22, 40, 0.12), 0 0 0 1px rgba(30, 86, 160, 0.25);
+}
+
+.hover-card-glow-dark {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-card-glow-dark:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(245, 158, 11, 0.3);
+}
+
+/* Pulse keyframes */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes pulseInstagram {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(225, 48, 108, 0);
+  }
+}
+
+@keyframes pulseAssistant {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(30, 86, 160, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(30, 86, 160, 0);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.animate-pulse-instagram {
+  animation: pulseInstagram 2.5s infinite;
+}
+
+.animate-pulse-assistant {
+  animation: pulseAssistant 2.5s infinite;
+}
+
+/* Custom industrial scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

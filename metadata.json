@@ -1,0 +1,6 @@
+{
+  "name": "RTX Construtora – Engenharia e Construção",
+  "description": "Site institucional oficial da RTX Construtora e Prestação de Serviços. Construção civil residencial e comercial, manutenção predial, controle de acesso e conservação patrimonial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
